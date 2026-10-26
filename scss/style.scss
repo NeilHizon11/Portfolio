@@ -1,0 +1,32 @@
+@use 'sections/hero';
+@use 'sections/work';
+@use 'sections/about';
+@use 'sections/contact-cta';
+@use 'sections/footer';
+@use 'pages/work-page';
+@use 'pages/about-page';
+@use 'pages/contact-page';
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #EBF5EE;
+  color: #283044;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+} 
+

@@ -1,0 +1,166 @@
+.contact-cta {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(100px, 12vw, 180px) clamp(24px, 4vw, 72px) 60px;
+  background: #283044;
+  color: #EBF5EE;
+
+  &__container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: clamp(70px, 10vw, 150px);
+  }
+
+  &__eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.5;
+  }
+
+  &__intro {
+    width: min(360px, 30vw);
+    margin: 0;
+    font-size: clamp(18px, 1.6vw, 24px);
+    line-height: 1.45;
+  }
+
+  &__main {
+    position: relative;
+  }
+
+  &__title {
+    max-width: 1300px;
+    margin: 0;
+    font-size: clamp(70px, 10vw, 170px);
+    font-weight: 400;
+    line-height: 0.88;
+    letter-spacing: -0.065em;
+    text-transform: uppercase;
+  }
+
+  &__line {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__text {
+    display: block;
+    will-change: transform;
+  }
+
+  &__button {
+    position: absolute;
+    right: clamp(0px, 5vw, 90px);
+    bottom: -70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(150px, 13vw, 220px);
+    aspect-ratio: 1;
+    padding: 24px;
+    border-radius: 50%;
+    background: #78A1BB;
+    color: #283044;
+    text-decoration: none;
+    transform-origin: center;
+    font-size: 30px;
+    transition:
+      transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      background 0.3s ease;
+
+    &:hover {
+      transform: scale(1.06);
+      background: #BFA89E;
+
+      .contact-cta__button-icon {
+        transform: translate(6px, -6px);
+      }
+    }
+  }
+
+  &__button-icon {
+    align-self: center;
+    font-size: 60px;
+    transition: transform 0.3s ease;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: clamp(130px, 14vw, 220px);
+    padding-top: 26px;
+    border-top: 1px solid rgba(235, 245, 238, 0.15);
+    font-size: 13px;
+
+    span {
+      opacity: 0.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-cta {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__intro {
+      width: min(500px, 100%);
+    }
+
+    &__button {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      margin-top: 50px;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-cta {
+    padding:
+      clamp(80px, 20vw, 120px)
+      20px
+      40px;
+
+    &__top {
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      font-size: clamp(56px, 16vw, 90px);
+    }
+
+    &__button {
+      width: 145px;
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      margin-top: 90px;
+    }
+  }
+}
