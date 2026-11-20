@@ -970,6 +970,10 @@
     width: 145px;
     margin-top: 40px;
     padding: 20px;
+    font-size: 20px;
+  }
+  .contact-cta__button-icon {
+    font-size: 40px;
   }
   .contact-cta__bottom {
     flex-direction: column;
